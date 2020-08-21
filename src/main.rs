@@ -10,8 +10,7 @@ use std::thread::sleep;
 
 fn main() {
     loop {
-        print!("\x1B[2J\x1B[1;1H");
-        let mut display = String::new();
+        let mut display = String::from("\x1B[2J\x1B[1;1H");
         display.push_str(&do_world());
         display.push_str(&do_countries());
         display.push_str(&do_states());
