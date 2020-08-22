@@ -16,7 +16,7 @@ fn main() {
         display.push_str(&do_states());
         display.push_str(&do_counties());
         print!("{}",display);
-        sleep(Duration::from_secs(15));
+        sleep(Duration::from_secs(300));
     }
 }
 

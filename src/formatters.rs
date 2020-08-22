@@ -25,21 +25,21 @@ pub fn format_new_bad(n: Option<u64>) -> String {
 #[allow(dead_code)]
 pub fn format_split_good(n: Option<u64>) -> String {
     match n {
-        Some(i) => format!("+{:8}",i.to_formatted_string(&Locale::en)).green().to_string(),
+        Some(i) => format!("+{}",i.to_formatted_string(&Locale::en)).green().to_string(),
         None => "+0".green().to_string(),
     }
 }
 
 pub fn format_split_neutral(n: Option<u64>) -> String {
     match n {
-        Some(i) => format!("+{:8}",i.to_formatted_string(&Locale::en)).yellow().to_string(),
+        Some(i) => format!("+{}",i.to_formatted_string(&Locale::en)).yellow().to_string(),
         None => "+0".yellow().to_string(),
     }
 }
 
 pub fn format_split_bad(n: Option<u64>) -> String {
     match n {
-        Some(i) => format!("+{:8}",i.to_formatted_string(&Locale::en)).red().to_string(),
+        Some(i) => format!("+{}",i.to_formatted_string(&Locale::en)).red().to_string(),
         None => "+0".red().to_string(),
     }
 }
