@@ -1,3 +1,5 @@
+//could definitely condense all of this down to a few functions easily
+
 use colored::*;
 use num_format::{Locale, ToFormattedString};
 
