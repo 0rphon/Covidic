@@ -261,15 +261,10 @@ impl CountyData {
 pub fn get_html(url: &str) -> Result <Document, Box<dyn error::Error>>{
     let resp = blocking::get(url)?;
     if !resp.status().is_success() {
-        return Err(Box::new(CustomError::UrlError(url.to_string(),
-            resp.status().as_u16()))
-        )
+        return Err(Box::new(CustomError::UrlError(
+            url.to_string(),
+            resp.status().as_u16()
+        )))
     };
-    //use std::fs::File;
-    //use std::io::prelude::*;
-    //let mut file = File::create("foo.html")?;
-    //let data = resp.text().unwrap();
-    //file.write_all(data.as_bytes())?;
-    //Ok(())
     Ok(Document::from_read(resp)?)
 }
